@@ -3,6 +3,11 @@ export interface LoginRes {
     token: string;
 }
 
+export interface RegisterRes {
+    username: string;
+    token: string;
+}
+
 export interface LoginReq {
     username: string;
     password: string;
