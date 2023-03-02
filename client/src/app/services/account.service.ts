@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
-import { LoginReq, LoginRes, RegisterRes } from '../Utils/interfaces';
+import { LoginRes, RegisterRes } from '../Utils/interfaces';
 
 
 @Injectable({
@@ -15,7 +15,7 @@ export class AccountService {
 
     constructor(private http: HttpClient) { }
 
-    public login(model: LoginReq) {
+    public login(model: any) {
         return this.http.post<LoginRes>(this.baseUrl + 'account/login', model).pipe(
             map((res: LoginRes) => {
                 const user = res;

@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    register() {
+    public register() {
         this.accountService.register(this.model).subscribe({
             next: () => {
                 this.cancel()
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
         });
     }
 
-    cancel() {
+    public cancel() {
         this.cancelRegister.emit(false);
     }
 }
