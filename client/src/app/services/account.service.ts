@@ -2,22 +2,23 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
-import { LoginRes, RegisterRes } from '../Utils/interfaces';
+import { environment } from 'src/environments/environment';
+import { User } from '../Utils/interfaces';
 
 
 @Injectable({
     providedIn: 'root'
 })
 export class AccountService {
-    baseUrl = 'https://localhost:5001/api/'
-    private currentUserState = new BehaviorSubject<LoginRes | null>(null);
+    baseUrl = environment.apiUrl;
+    private currentUserState = new BehaviorSubject<User | null>(null);
     currentUser$ = this.currentUserState.asObservable();
 
     constructor(private http: HttpClient) { }
 
     public login(model: any) {
-        return this.http.post<LoginRes>(this.baseUrl + 'account/login', model).pipe(
-            map((res: LoginRes) => {
+        return this.http.post<User>(this.baseUrl + 'account/login', model).pipe(
+            map((res: User) => {
                 const user = res;
                 if (user) {
                     localStorage.setItem('userCredentials', JSON.stringify(user));
@@ -28,8 +29,8 @@ export class AccountService {
     }
 
     public register(model: any) {
-        return this.http.post<RegisterRes>(this.baseUrl + 'account/register', model).pipe(
-            map((res: RegisterRes) => {
+        return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
+            map((res: User) => {
                 const user = res;
                 if (user) {
                     localStorage.setItem('userCredentials', JSON.stringify(user));
@@ -39,7 +40,7 @@ export class AccountService {
         );
     }
 
-    public setCurrentUser(user: LoginRes) {
+    public setCurrentUser(user: User) {
         this.currentUserState.next(user);
     }
 

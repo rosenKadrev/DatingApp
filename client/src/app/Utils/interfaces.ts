@@ -1,21 +1,26 @@
-export interface LoginRes {
-    username: string;
-    token: string;
-}
-
-export interface RegisterRes {
-    username: string;
-    token: string;
-}
-
-export interface LoginReq {
-    username: string;
-    password: string;
-}
-
 export interface User {
+    username: string;
+    token: string;
+}
+export interface Photo {
     id: number;
-    passwordHash: string;
-    passwordSalt: string;
-    userName: string;
+    url: string;
+    isMain: boolean;
+}
+
+export interface Member {
+    id: number;
+    username: string;
+    photoUrl: string;
+    age: number;
+    knownAs: string;
+    created: Date;
+    lastActive: Date;
+    gender: string;
+    introduction: string;
+    lookingFor: string;
+    interests: string;
+    city: string;
+    country: string;
+    photos: Photo[];
 }
