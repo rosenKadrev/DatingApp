@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
+import { NgxGalleryAnimation } from '@kolkov/ngx-gallery';
 import { NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery/public-api';
 import { MembersService } from 'src/app/services/members.service';
 import { Member } from 'src/app/Utils/interfaces';

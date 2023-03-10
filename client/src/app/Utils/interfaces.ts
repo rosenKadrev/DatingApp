@@ -2,6 +2,8 @@ export interface User {
     username: string;
     token: string;
     photoUrl: string;
+    knownAs: string;
+    gender: string;
 }
 export interface Photo {
     id: number;
@@ -24,4 +26,29 @@ export interface Member {
     city: string;
     country: string;
     photos: Photo[];
+}
+
+export interface Pagination {
+    currentPage: number;
+    itemsPerPage: number;
+    totalItems: number;
+    totalPages: number;
+}
+
+export class PaginatedResult<T> {
+    result?: T;
+    pagination?: Pagination;
+}
+
+export class UserParams {
+    gender: string;
+    minAge = 18;
+    maxAge = 99;
+    pageNumber = 1;
+    pageSize = 6;
+    orderBy = 'lastActive';
+
+    constructor(user: User) {
+        this.gender = user.gender === 'female' ? 'male' : 'female';
+    }
 }
