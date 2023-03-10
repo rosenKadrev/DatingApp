@@ -11,7 +11,7 @@
                     (click)="setMainPhoto(photo)"
                     [ngClass]="photo.isMain ? 'btn-success active': 'btn-outline-success'">Main</button>
             <button [disabled]="photo.isMain"
-                    class="btn btn-sm btn-danger"
+                    class="btn btn-sm btn-danger ms-1"
                     (click)="deletePhoto(photo.id)"><i class="fa fa-trash"></i></button>
         </div>
     </div>
@@ -67,24 +67,26 @@
                          [ngStyle]="{ 'width': uploader?.progress + '%' }"></div>
                 </div>
             </div>
-            <button type="button"
-                    class="btn btn-success btn-s"
-                    (click)="uploader?.uploadAll()"
-                    [disabled]="!uploader?.getNotUploadedItems()?.length">
-                <span class="fa fa-upload"></span> Upload all
-            </button>
-            <button type="button"
-                    class="btn btn-warning btn-s"
-                    (click)="uploader?.cancelAll()"
-                    [disabled]="!uploader?.isUploading">
-                <span class="fa fa-ban"></span> Cancel all
-            </button>
-            <button type="button"
-                    class="btn btn-danger btn-s"
-                    (click)="uploader?.clearQueue()"
-                    [disabled]="!uploader?.queue?.length">
-                <span class="fa fa-trash"></span> Remove all
-            </button>
+            <div class="mt-3">
+                <button type="button"
+                        class="btn btn-success btn-s"
+                        (click)="uploader?.uploadAll()"
+                        [disabled]="!uploader?.getNotUploadedItems()?.length">
+                    <span class="fa fa-upload"></span> Upload all
+                </button>
+                <button type="button"
+                        class="btn btn-warning btn-s ms-2"
+                        (click)="uploader?.cancelAll()"
+                        [disabled]="!uploader?.isUploading">
+                    <span class="fa fa-ban"></span> Cancel all
+                </button>
+                <button type="button"
+                        class="btn btn-danger btn-s ms-2"
+                        (click)="uploader?.clearQueue()"
+                        [disabled]="!uploader?.queue?.length">
+                    <span class="fa fa-trash"></span> Remove all
+                </button>
+            </div>
         </div>
     </div>
 </div>
