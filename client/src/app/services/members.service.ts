@@ -113,4 +113,15 @@ export class MembersService {
     public deletePhoto(photoId: number) {
         return this.http.delete(this.baseUrl + 'users/delete-photo/' + photoId);
     }
+
+    public addLike(username: string) {
+        return this.http.post(this.baseUrl + 'likes/' + username, {});
+    }
+
+    public getLikes(predicate: string, pageNumber: number, pageSize: number) {
+        let params = this.getPaginationHeaders(pageNumber, pageSize);
+        params = params.append('predicate', predicate);
+
+        return this.getPaginatedResult<Member[]>(this.baseUrl + 'likes', params);
+    }
 }
