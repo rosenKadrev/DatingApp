@@ -35,6 +35,19 @@ export interface Pagination {
     totalPages: number;
 }
 
+export interface Message {
+    id: number;
+    senderId: number;
+    senderUsername: string;
+    senderPhotoUrl: string;
+    recipientId: number;
+    recipientUsername: string;
+    recipientPhotoUrl?: any;
+    content: string;
+    dateRead?: Date;
+    messageSent: Date;
+}
+
 export class PaginatedResult<T> {
     result?: T;
     pagination?: Pagination;
