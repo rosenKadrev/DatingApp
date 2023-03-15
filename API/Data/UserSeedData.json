@@ -1,6 +1,6 @@
 [
     {
-        "Username": "Dominique",
+        "UserName": "Dominique",
         "Gender": "female",
         "DateOfBirth": "1951-09-25",
         "KnownAs": "Dominique",
@@ -19,7 +19,7 @@
         ]
     },
     {
-        "Username": "Augusta",
+        "UserName": "Augusta",
         "Gender": "female",
         "DateOfBirth": "1952-11-10",
         "KnownAs": "Augusta",
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "Username": "Angela",
+        "UserName": "Angela",
         "Gender": "female",
         "DateOfBirth": "1973-02-27",
         "KnownAs": "Angela",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "Username": "Susana",
+        "UserName": "Susana",
         "Gender": "female",
         "DateOfBirth": "1973-10-05",
         "KnownAs": "Susana",
@@ -76,7 +76,7 @@
         ]
     },
     {
-        "Username": "Lesley",
+        "UserName": "Lesley",
         "Gender": "female",
         "DateOfBirth": "1982-05-28",
         "KnownAs": "Lesley",
@@ -95,7 +95,7 @@
         ]
     },
     {
-        "Username": "Pollard",
+        "UserName": "Pollard",
         "Gender": "male",
         "DateOfBirth": "1978-03-04",
         "KnownAs": "Pollard",
@@ -114,7 +114,7 @@
         ]
     },
     {
-        "Username": "Nelson",
+        "UserName": "Nelson",
         "Gender": "male",
         "DateOfBirth": "1997-08-03",
         "KnownAs": "Nelson",
@@ -133,7 +133,7 @@
         ]
     },
     {
-        "Username": "Pickett",
+        "UserName": "Pickett",
         "Gender": "male",
         "DateOfBirth": "1953-01-07",
         "KnownAs": "Pickett",
@@ -152,7 +152,7 @@
         ]
     },
     {
-        "Username": "Vaughn",
+        "UserName": "Vaughn",
         "Gender": "male",
         "DateOfBirth": "1965-01-08",
         "KnownAs": "Vaughn",
@@ -171,7 +171,7 @@
         ]
     },
     {
-        "Username": "Marks",
+        "UserName": "Marks",
         "Gender": "male",
         "DateOfBirth": "1979-07-24",
         "KnownAs": "Marks",
